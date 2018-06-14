@@ -2,6 +2,7 @@ from peewee import *
 
 db=SqliteDatabase('kfc.db')
 
+#clase de usuario
 class User(Model):
     nombre=CharField()
     apellido=CharField()
@@ -9,7 +10,7 @@ class User(Model):
     password=CharField()
     class Meta:
         database=db
-    @ClassMethod
+    @classmethod #metodo de la clase para registrar el usuario
     def create_user(cls,nombre,apellido,username,password):
         try:
             cls.create(
@@ -20,6 +21,7 @@ class User(Model):
             )
         except IntegrityError:
             raise ValueError('el usuario ya existe')
+#clase de pedido
 class pedido(Model):
     cliente=CharField()
     usuarioLog=ForeignKeyField(User)
@@ -27,7 +29,7 @@ class pedido(Model):
     valor=CharField()
     class Meta:
         database=db
-    @ClassMethod
+    @classmethod #metodo de la clase para crear el pedido
     def createPedido(cls,descripcion,valor):
         try:
             cls.create(
@@ -37,6 +39,7 @@ class pedido(Model):
         except IntegrityError:
             raise ValueError('el pedido ya existe')
 
+#metodo que crea las tablas antes definidas
 def baseDatos():
     db.connect()
     db.create_tables([User,pedido],safe=True)
