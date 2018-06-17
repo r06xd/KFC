@@ -19,6 +19,10 @@ login_manager.login_view='login'
 
 #metodo para cargar el usuario q esta logiado
 #<!--Editar para direccionar con las paginas del proyecto-->
+@login_manager.user_loader
+def load_user(user_id):
+    return User.get(user_id)
+
 @app.before_request
 def before_request():
     """"Conectar a la base de datos antes de cada request"""
