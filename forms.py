@@ -1,6 +1,8 @@
-from wtforms import Form,StringField,BooleanField, IntegerField, PasswordField, validators,SelectField
+from wtforms import Form,StringField,BooleanField, IntegerField, PasswordField, validators,SelectField, TextAreaField
 from flask_wtf import FlaskForm
 from models import *
+from wtforms.validators import (DataRequired, ValidationError, Email, Regexp,
+                                Length, EqualTo)
 
 class user(FlaskForm):
     nombre=StringField()
@@ -14,6 +16,26 @@ class pedido(FlaskForm):
     descripcion=StringField()
     valor=IntegerField()
 
-class loginForm(FlaskForm):
-    username=StringField()
-    password=PasswordField()
+#<!--Editar para direccionar con las paginas del proyecto-->
+#formulario de iniciar sesión
+class LoginForm(FlaskForm):
+    username=StringField(
+        'Email',
+        validators=[
+
+            DataRequired(),
+        ])
+    password=PasswordField(
+        'Password',
+        validators=[
+            DataRequired(),
+            ])
+
+
+class PostForm(FlaskForm):
+    content=TextAreaField(
+        'Que piensas',
+        validators=[
+            DataRequired()
+        ]
+    )

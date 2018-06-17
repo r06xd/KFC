@@ -1,9 +1,10 @@
 from peewee import *
-
+from flask_bcrypt import generate_password_hash
+from flask_login import UserMixin
 db=SqliteDatabase('kfc.db')
 
 #clase de usuario
-class User(Model):
+class User(UserMixin,Model):
     nombre=CharField()
     apellido=CharField()
     username=CharField()
@@ -17,7 +18,7 @@ class User(Model):
             nombre=nombre,
             apellido=apellido,
             username=username,
-            password=password
+            password=generate_password_hash(password)
             )
         except IntegrityError:
             raise ValueError('el usuario ya existe')
