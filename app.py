@@ -19,6 +19,7 @@ login_manager.login_view='login'
 
 #metodo para cargar el usuario q esta logiado
 #<!--Editar para direccionar con las paginas del proyecto-->
+#se agrego el user loeader para que funcione
 @login_manager.user_loader
 def load_user(user_id):
     return User.get(user_id)
