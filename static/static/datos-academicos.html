@@ -1,0 +1,95 @@
+<html >
+<head>
+
+
+	<title>datos Academicos</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<meta name="copyright" content="" />
+	<meta name="revisit-after" content="3 days" />
+
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+ <div id="header">
+	    <h1>Datos Academicos</h1>
+</div>
+
+
+<center>
+
+<div id="container">
+
+<form method="Post" action="academicos.php"  name="parcial">
+
+<table border="1" width="70%">
+
+ 	<tr>
+        <td id= "etiqueta">Codigo: </td>
+        <td> <input type="text" name="codigo" size="20"> </td>
+    </tr>
+
+    <tr>
+        <td id= "etiqueta"> Carrera: </td>
+        <td>
+        <select name="carrera">
+        <option value="ISR"> Ingenieria en Sistemas y Redes </option>
+        <option value="LC" selected>Licenciatura en Computacion</option>
+        <option value="TE"> Tecnico en Ingenieria</option>
+        <option value="TP"> Tecnico Programador </option>
+        </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td id= "etiqueta"> Asignatura Preferida: </td>
+        <td>
+        <select name="asignatura">
+        <option value="Programacion Web" selected> Programacion Web</option>
+        <option value="Metodos de Investigacion"> Metodos de Investigacion</option>
+        <option value="Ingles"> Ingles</option>
+        <option value="Ingenieria de Software"> Ingenieria de Software </option>
+        <option value="Base de Datos I">Base de Datos I</option>
+        </select>
+        </td>
+
+    </tr>
+
+    <tr>
+	    <td id= "etiqueta">Prefieres: </td>
+        <td>
+             Clase Teorica:
+             <input type="radio" name="clase" value="Clase Teorica">
+             Clase Practica:
+             <input type="radio" name="clase" value="Clase Practica">
+         </td>
+
+    </tr>
+
+    <tr>
+        <td id= "etiqueta">Comentarios</td>
+        <td>
+           <br>
+          <textarea name="comentario" cols="40" rows="4"></textarea>
+         </td>
+     </tr>
+
+ </table>
+
+
+ <input type="submit" name="enviar" value="Enviar" OnClick="validacion()">
+ <input type="reset" name="borrar" value="Borrar">
+ <br/>
+
+    </form>
+    </center>
+</div>
+
+</body>
+</html>

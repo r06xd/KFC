@@ -1,0 +1,142 @@
+
+html { font-size: 76%; }
+
+/* Cuerpo */
+body {
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #333;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+/* Encabezados */
+h2, h3, h4, h5, h6 { 
+	color: #099; 
+	margin: 0; 
+	font-weight: normal;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  letter-spacing: -1px;
+	}
+h2 { font-size: 1.8em; margin: 25px 0 15px; }
+h3 { font-size: 1.6em; margin: 25px 0 15px; }
+h4 { font-size: 1.4em; margin: 20px 0 10px; }
+h5 { font-size: 1.2em; margin: 20px 0 5px; }	
+h6 { font-size: 1.1em; margin: 20px 0 0; }
+
+/* Parrafo */
+p { margin: 15px 0; }
+
+/* Citas */
+blockquote { 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; 
+  border: 1px solid #ddd; 
+	padding: 0 15px 0 15px;
+	background-color: #eee;
+	min-height: 60px; 
+	}
+	
+/* Enlaces */
+a { text-decoration: underline; color: #099; outline: none; }
+a:hover { text-decoration: none; }
+
+/* Imagenes */
+img { 
+border: 0px solid #ddd; 
+padding: 0px; 
+background-color: #fff; 
+}	
+a:hover img { border-color: #eee; }
+img.right { margin: 0 0 20px 20px; }
+img.left { margin: 0 20px 20px 0; }
+
+/* Listas */
+ul, ol, dl { margin: 15px 0 15px 20px; padding: 0; }
+ul { list-style-type: disc; }
+ul ul, ol ol { margin-top: 0; margin-bottom: 0; }
+ol { margin-left: 25px; }
+dl { margin-left: 0; }
+dl dt { font-weight: bold; margin-top: 15px; }
+dl dd { margin: 0; }
+dl dt, li { color: #099; }
+li span { color: #333; }
+
+/* Tablas */
+table { margin: 15px 0; 
+border: 1px solid #ddd; 
+border-collapse: collapse; 
+}
+table th, 
+table td { padding: 10px 15px; text-align: left; }
+table thead th { 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; 
+	background-color: #099; 
+	color: #fff; 
+	font-weight: normal; 
+	font-size: 1.1em;
+	border: 1px solid #099;
+	}
+	
+table tbody th { background-color: #ddd; }
+table tbody th, 
+table tbody td { border-top: 1px solid #ddd; }
+
+/* Formularios */
+form { border: 1px solid #ddd; padding: 0; margin: 25px 0; }
+form fieldset { border: 0; padding: 10px 25px 15px; margin: 0; }
+form fieldset legend { display: none; }
+form p { height: 1%; }
+
+form p:after { content: "."; 
+display: block; clear: both; 
+height: 0; 
+visibility: hidden; 
+}
+
+form p label {  
+	font-size: 1em; 
+	color: #333; 
+	float: left; 
+	display: block; 
+	width: 30%; 
+	margin-right: 20px; 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  }
+
+form p input,
+form p select,
+form p textarea { 
+	font-size: 1em; 
+	color: #333; 
+	border: 1px solid #ddd; 
+	padding: 8px; 
+	background-color: #eee; 
+	width: 55%; 
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif; 
+	}
+
+/* Linea */
+hr { border: 0; 
+height: 1px; 
+background-color: #ddd; 
+color: #ddd; 
+margin: 30px 0 0; }
+
+/* PiePagina */
+#footer { 
+	padding: 0 20px; 
+	background-color: #222; 
+	height: 1%; 
+	font-size: 0.9em;
+	color: #ccc;
+	margin-top: -20px;
+	}	
+#footer:after {
+	content: ".";
+	clear: both;
+	visibility: hidden;
+	display: block;
+	height: 0;
+	}

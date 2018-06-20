@@ -1,0 +1,61 @@
+
+body{
+
+	padding:20px;
+	margin:20px 60px;
+	font-family:Arial;
+	font-size: 18px;
+	background-color:silver;
+}
+
+.principal{
+	width: 95%;
+	height: 720px;
+	background-color: white;
+	margin: 15px 15px 15px 15px;
+	border:1px inset purple;
+}
+
+.encabezado
+{
+	width: 97%;
+	height: 100px;
+	background-color: D0FA58;
+	margin: 15px 15px 15px 15px ;
+	border:1px inset purple;
+}
+
+.pagina{
+	width: 97%;
+	height: 550px;
+	background-color: D0FA58;
+	margin: 15px 15px 15px 15px ;
+	border:1px inset purple;
+	text-align:center;
+
+}
+
+.menu{
+	width: 20%;
+	height: 500px;
+	background-color: D0FA58;
+	margin: 15px 15px 15px 15px ;
+	float: left;
+	border:1px inset purple;
+	text-align:left;
+
+}
+
+.contenido{
+	width: 73%;
+	height: 500px;
+	background-color: D0FA58;
+	float: right;
+	margin: 15px 15px 15px 15px ;
+	border-color: black;
+	border:2px;
+	border:1px inset purple;
+	font-family:Arial;
+	font-size: 10px;
+
+}

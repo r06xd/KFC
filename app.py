@@ -6,6 +6,10 @@ from flask_bcrypt import check_password_hash
 import forms
 import models
 
+DEBUG=True
+PORT=7000
+HOST='0.0.0.0'
+
 app=Flask(__name__)
 app.config.from_object(__name__)
 
@@ -37,9 +41,9 @@ def after_request(response):
     g.db.close()
     return response
 
-@app.route('/')
-def inicio():
-    return render_template('index.html')
+@app.route('/principal')
+def principal():
+    return render_template('principal.html')
 
 @app.route('/registro',methods=['GET','POST'])
 def registro():
@@ -73,7 +77,7 @@ def login():
 
 @app.route('/index')
 def index():
-    return 'entro correctamente'
+    return render_template('index.html')
 
 if __name__=='__main__':
     baseDatos()
