@@ -67,7 +67,7 @@ def login():
             user=models.User.get(models.User.username==form.username.data)
         except models.DoesNotExist:
             flash('Tu nombre de usuario o contraseña no existe','error')
-        else:#en caso de que el registro si lo encontro en la base
+        else:#en caso de que el registrso si lo encontro en la base
             if check_password_hash(user.password,form.password.data):
                 login_user(user)
                 flash('Has iniciado sesion','success')
@@ -78,6 +78,11 @@ def login():
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/pedido',methods=['GET','POST'])
+def pedido():
+    formPedido=forms.pedido(request.form)
+    return render_template('pedido.html',form=formPedido)
 
 if __name__=='__main__':
     baseDatos()

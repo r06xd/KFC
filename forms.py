@@ -14,7 +14,7 @@ class user(FlaskForm):
 class pedido(FlaskForm):
     cliente=StringField()
     descripcion=StringField()
-    valor=IntegerField()
+    valor=StringField()
 
 #<!--Editar para direccionar con las paginas del proyecto-->
 #formulario de iniciar sesión

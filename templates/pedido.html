@@ -1,0 +1,21 @@
+<html>
+<div class="encabezado">
+<h1><center>KFC</center></h1>
+</div>
+<center><br>
+<img src="static/img/kfc.jpg" alt="image" width="200px" height="150px">
+</center>
+<center>
+<div id="container">
+  {%from 'macros.html' import render_field %}
+
+  <form class="form" action="" method="POST">
+    {{form.hidden_tag()}}
+    {% for field in form%}
+      {{render_field(field)}}</br>
+    {%endfor%}
+  <button type="submit" id="submit">Iniciar Sesión</button>
+  </form>
+</div>
+</center>
+</html>
