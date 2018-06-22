@@ -1,11 +1,12 @@
 
+
 body{
 
 	padding:20px;
 	margin:20px 60px;
 	font-family:Arial;
 	font-size: 18px;
-	background-color:silver;
+	background-color:white;
 }
 
 .principal{
@@ -13,16 +14,16 @@ body{
 	height: 720px;
 	background-color: white;
 	margin: 15px 15px 15px 15px;
-	border:1px inset purple;
+	border:1px inset black;
 }
 
 .encabezado
 {
 	width: 97%;
 	height: 100px;
-	background-color: D0FA58;
+	background-color: #FF0000;
 	margin: 15px 15px 15px 15px ;
-	border:1px inset purple;
+	border:1px inset black;
 }
 
 .pagina{
@@ -30,7 +31,7 @@ body{
 	height: 550px;
 	background-color: D0FA58;
 	margin: 15px 15px 15px 15px ;
-	border:1px inset purple;
+	border:1px inset black;
 	text-align:center;
 
 }
@@ -41,7 +42,7 @@ body{
 	background-color: D0FA58;
 	margin: 15px 15px 15px 15px ;
 	float: left;
-	border:1px inset purple;
+	border:1px inset white;
 	text-align:left;
 
 }
@@ -49,7 +50,7 @@ body{
 .contenido{
 	width: 73%;
 	height: 500px;
-	background-color: D0FA58;
+	background-color: red;
 	float: right;
 	margin: 15px 15px 15px 15px ;
 	border-color: black;

@@ -12,9 +12,10 @@
   <form class="form" action="" method="POST">
     {{form.hidden_tag()}}
     {% for field in form%}
+    {{field.label}}
       {{render_field(field)}}</br>
     {%endfor%}
-  <button type="submit" id="submit">Iniciar Sesión</button>
+  <button type="submit" id="submit">Guardar</button>
   </form>
 </div>
 </center>

@@ -9,22 +9,26 @@
         <title>{% block title %}FaceSmash{% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
-        <link rel="stylesheet" href="css/style.css">
-
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilos-formato.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilos-div.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          </head>
+          <body>
 
     </head>
     <body>
+      <center>
         <header>
           <div class="row">
-            <div class="grid-33">
-              <a href="{{ url_for('index') }}" class="logo">KFC</a>
-            </div>
+            
             <div class="grid-33">
                   <!-- Bienvenida
                 a nuestro usuario y va a cambiar de nombre dinamicamente-->
-                <h1> hola {% if current_user.is_authenticated %} {{current_user.username}}{% endif %}</h1>
+                <div class="page-header">
+    <h1>KFC<small>
+    </br>Systema de pedidos</small></h1>
+  </div>
             </div>
 
             <div class="grid-33">
@@ -65,7 +69,7 @@
           <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
           <script src='https://codepen.io/andytran/pen/vLmRVp.js'></script>
           <script  src="js/index.js"></script>
-
+</center>
     </body>
 </html>
 

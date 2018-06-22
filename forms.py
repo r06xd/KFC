@@ -8,13 +8,13 @@ class user(FlaskForm):
     nombre=StringField()
     apellido=StringField()
     username=StringField()
-    password=PasswordField('password',[validators.DataRequired(),validators.EqualTo('confirm',message='es incorrecto')])
+    password=PasswordField('password',[validators.DataRequired(),validators.EqualTo('confirm',message='La contraseña no coincide vuelva a intentarlo porfavor')])
     confirm=PasswordField('confirme')
 
 class pedido(FlaskForm):
     cliente=StringField()
     descripcion=StringField()
-    valor=StringField()
+    valor=StringField('valor')
 
 #<!--Editar para direccionar con las paginas del proyecto-->
 #formulario de iniciar sesión
@@ -23,12 +23,11 @@ class LoginForm(FlaskForm):
         'Email',
         validators=[
 
-            DataRequired(),
         ])
     password=PasswordField(
         'Password',
         validators=[
-            DataRequired(),
+
             ])
 
 

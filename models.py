@@ -1,13 +1,14 @@
 from peewee import *
 from flask_bcrypt import generate_password_hash
 from flask_login import UserMixin
+from flask import flash
 db=SqliteDatabase('kfc.db')
 
 #clase de usuario
 class User(UserMixin,Model):
     nombre=CharField()
     apellido=CharField()
-    username=CharField()
+    username=CharField(unique=True)
     password=CharField()
     class Meta:
         database=db
@@ -20,8 +21,10 @@ class User(UserMixin,Model):
             username=username,
             password=generate_password_hash(password)
             )
+            flash(' se creo correctamente')
         except IntegrityError:
-            raise ValueError('el usuario ya existe')
+            return flash('usuario ya existe')
+
 #clase de pedido
 class pedido(Model):
     cliente=CharField()
@@ -31,9 +34,11 @@ class pedido(Model):
     class Meta:
         database=db
     @classmethod #metodo de la clase para crear el pedido
-    def createPedido(cls,descripcion,valor):
+    def create_Pedido(cls,cliente,usuarioLog,descripcion,valor):
         try:
             cls.create(
+            cliente=cliente,
+            usuarioLog=usuarioLog,
             descripcion=descripcion,
             valor=valor
             )

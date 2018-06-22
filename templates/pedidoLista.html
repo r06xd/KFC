@@ -1,0 +1,10 @@
+<form action="">
+  <h1>ESTOS SON TUS PEDIDOS:</h1>
+{%for pedidos in lista%}
+Cliente:{{pedidos.cliente}}
+Descripcion:{{pedidos.descripcion}}
+Valor:{{pedidos.valor}}
+</br>---------------------------------------------------------------------------</br>
+{%endfor%}
+
+</form>

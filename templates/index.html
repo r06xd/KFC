@@ -2,25 +2,27 @@
 <html lang="en">
 <meta charset="UTF-8">
   <head>
-  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
-  <meta name="generator" content="PSPad editor, www.pspad.com">
+
   <title>Principal</title>
 
   <link rel="stylesheet" href="{{url_for('static',filename='css/estilos-formato.css')}}"/>
   <link rel="stylesheet" href="{{url_for('static',filename='css/estilos-div.css')}}"/>
   <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}"/>
-
-  </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
+<div class="encabezado">
+<center>
+  <div style="width:70%">
+    <h1><strong style="margin:auto;color:white" >KFC</strong></h1>
+</div>
+<strong style="width:20%;margin:auto">Bienvenido:{{current_user.nombre}}</strong></div></center>
+<div style="width:95%">
+<button style="color:white;float:right" onclick="window.location.href='{{url_for('logout')}}';"><span class="glyphicon glyphicon-off"></span> salir</button>
+</div>
 
 
   <div class="principal">
-
-  	<div class="encabezado">
-	  <h1><center>KFC</center></h1>
-	</div>
-
 
 	  <div class="pagina">
 
@@ -29,29 +31,31 @@
 	  <img src="static/img/logo-menu.jpg" alt="image" width="200px" height="150px">
 		  </center>
 	  <ul>
-	  <li><a href="static/static/principal.html" target="formulario">Principal</a></li>
+	  <li><a href="{{url_for('pedidoCrear')}}" target="formulario">Realizar Pedido</a></li>
 	  </ul>
 	  <ul>
-	  <li><a href="static/static/datos-personales.html" target="formulario">Datos Personales</a></li>
+	  <li><a href="{{url_for('registro')}}" target="formulario">Datos Personales</a></li>
 	  </ul>
-	  <ul>
-	  <li><a href="static/static/datos-academicos.html" target="formulario">Datos Academicos</a></li>
-	  </ul>
-	  <ul>
+    <ul>
+   <li><a href="{{url_for('buscarUsuario')}}" target="formulario">Editar Usuario</a></li>
+   </ul>
+	   <ul>
 	  <li><a href="static/static/desarrolladores.html" target="formulario">desarrolladores</a></li>
 	  </ul>
+    <ul>
+   <li><a href="{{url_for('pedidoUsuarios')}}" target="formulario">Listado Pedido</a></li>
+   </ul>
 	  </div>
 
 
 	  <div class="contenido">
 	  <br/>
-	  <iframe src="static/static/datos-personales.html" style="width: 90%; height: 90%" name="formulario"></iframe>
+	  <iframe src="{{url_for('registro')}}" style="width: 90%; height: 90%" name="formulario"></iframe>
 	  </div>
 
 	  </div>
 
 	</div>
-
 
   </body>
 </html>
